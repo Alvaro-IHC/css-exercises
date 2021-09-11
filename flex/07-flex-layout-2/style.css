@@ -26,3 +26,67 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* My solution  */
+html{
+  box-sizing: border-box;
+}
+*, *::after, *::before{
+  box-sizing: inherit;
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  font-size: 32px;
+  font-weight: 700;
+  padding-left: 16px;
+  /* padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0; */
+  display: flex;
+  align-items: center;
+}
+.content{
+  flex: 1;
+  display: flex;
+}
+.sidebar{
+  min-width: 300px;
+  padding: 16px;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.main{
+  padding: 32px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card{
+  flex: 1 1 calc(50% - 20px);
+  padding: 10px;
+}
+@media (min-width: 780px){
+  .card{
+    flex: 1 1 calc(33.3% - 20px);
+  }
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
